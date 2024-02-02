@@ -28,18 +28,18 @@ jobs:
         cache: 'npm'
     - name: Install Dependencies 📦
       run: |
-        cd ../frontend/dynamo
+        cd frontend/dynamo
         npm ci
     - name: Build the app 🛠
       run: |
-        cd ../../frontend/dynamo
+        cd frontend/dynamo
         npm run build --if-present
     - name: Run Component Tests 🧪
       run: |
-        cd ../../frontend/dynamo
+        cd frontend/dynamo
         npm test
     - name: Start the App 🕹
       run: | 
-        cd ../../frontend/dynamo
+        cd frontend/dynamo
         npm start &
         npx wait-on --timeout 60000
